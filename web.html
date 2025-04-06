@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football World</title>
+    <style>
+        /* Football-themed styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #006400;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #006400;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #006400;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #006400;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #006400;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #004d00;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .football-image {
+            border: 3px solid #006400;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main header for the page -->
+    <header>
+        <h1>⚽ Football World ⚽</h1>
+        <p>Your ultimate football resource</p>
+    </header>
+
+    <!-- Ordered list with roman numerals - Top Football Leagues -->
+    <section>
+        <h2>Top Football Leagues</h2>
+        <ol type="I">
+            <li>English Premier League</li>
+            <li>La Liga (Spain)</li>
+            <li>Bundesliga (Germany)</li>
+            <li>Serie A (Italy)</li>
+            <li>Ligue 1 (France)</li>
+        </ol>
+    </section>
+
+    <!-- External football image from pexels.com -->
+    <section>
+        <h2>Football Action</h2>
+        <img class="football-image" src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg" alt="Football match action" width="600">
+        <p>Image sourced from <a href="https://pexels.com" target="_blank">Pexels.com</a></p>
+    </section>
+
+    <!-- Table of 5 football players -->
+    <section>
+        <h2>Top Football Players</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Nationality</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lionel Messi</td>
+                    <td>Inter Miami</td>
+                    <td>Argentina</td>
+                    <td>Forward</td>
+                </tr>
+                <tr>
+                    <td>Cristiano Ronaldo</td>
+                    <td>Al-Nassr</td>
+                    <td>Portugal</td>
+                    <td>Forward</td>
+                </tr>
+                <tr>
+                    <td>Kylian Mbappé</td>
+                    <td>Paris Saint-Germain</td>
+                    <td>France</td>
+                    <td>Forward</td>
+                </tr>
+                <tr>
+                    <td>Kevin De Bruyne</td>
+                    <td>Manchester City</td>
+                    <td>Belgium</td>
+                    <td>Midfielder</td>
+                </tr>
+                <tr>
+                    <td>Virgil van Dijk</td>
+                    <td>Liverpool</td>
+                    <td>Netherlands</td>
+                    <td>Defender</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Football club registration form -->
+    <section>
+        <h2>Football Club Registration</h2>
+        <form id="registrationForm">
+            <!-- Name field -->
+            <div class="form-group">
+                <label for="name" class="required">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email" class="required">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group">
+                <label for="password" class="required">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" minlength="8" required>
+            </div>
+
+            <!-- Date of birth -->
+            <div class="form-group">
+                <label for="dob" class="required">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Preferred position dropdown -->
+            <div class="form-group">
+                <label for="position">Preferred Position:</label>
+                <select id="position" name="position">
+                    <option value="">Select your position</option>
+                    <option value="gk">Goalkeeper</option>
+                    <option value="def">Defender</option>
+                    <option value="mid">Midfielder</option>
+                    <option value="fwd">Forward</option>
+                </select>
+            </div>
+
+            <!-- Experience level radio buttons -->
+            <div class="form-group">
+                <label>Experience Level:</label>
+                <div>
+                    <input type="radio" id="beginner" name="experience" value="beginner">
+                    <label for="beginner">Beginner</label>
+                </div>
+                <div>
+                    <input type="radio" id="intermediate" name="experience" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                </div>
+                <div>
+                    <input type="radio" id="advanced" name="experience" value="advanced">
+                    <label for="advanced">Advanced</label>
+                </div>
+            </div>
+
+            <!-- Availability checkboxes -->
+            <div class="form-group">
+                <label>Available Days:</label>
+                <div>
+                    <input type="checkbox" id="monday" name="available_days" value="monday">
+                    <label for="monday">Monday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="wednesday" name="available_days" value="wednesday">
+                    <label for="wednesday">Wednesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="saturday" name="available_days" value="saturday">
+                    <label for="saturday">Saturday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sunday" name="available_days" value="sunday">
+                    <label for="sunday">Sunday</label>
+                </div>
+            </div>
+
+            <!-- Additional comments -->
+            <div class="form-group">
+                <label for="comments">Additional Information:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any additional information about your football experience"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <button type="submit">Register for Football Club</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Football World. All rights reserved.</p>
+    </footer>
+</body>
+</html>
